@@ -1,5 +1,5 @@
 <% @songs.each do |song|%>
 <% @artist = Artist.find(song.artist_id)%>
 <%= link_to "#{song.title} - #{@artist.name}", artist_path(artist) %>
-<%= "#{artist.songs.count} songs" %>
+<%= link_to @artist.name, artist_path(@artist)" %>
 <% end %>
